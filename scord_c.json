@@ -1,0 +1,136 @@
+[
+    {
+        "item_name": "百度网站",
+        "item_url": "www.baidu.com",
+        "workspace": [
+            {
+                "work_class": "第一部分",
+                "work_cooperation": "and/or",
+                "work_items": [
+                    {
+                        "method_cooperation": "and/or",
+                        "method_works":[
+                            {
+                                "method_name": "获取文本1保存名字",
+                                "items_path": "a > b > c",
+                                "method_result": "text",
+                                "result_deal": {
+                                    "deal_name":"save_variables //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
+                                    "variables_name":"abc //这里定义一个变量名字"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "method_cooperation": "and/or",
+                        "method_works":[
+                            {
+                                "method_name": "获取文本1",
+                                "items_path": "a > b > c",
+                                "method_result": "item"
+                            },
+                            {
+                                "method_name": "获取文本1",
+                                "items_path": "d",
+                                "method_result": "text",
+                                "result_deal": {
+                                    "deal_name":"save_text //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
+                                    "deal_path":"./${abc}.txt //如果这里是一个目录或者一个类型就保存为不同的txt, 否则只保存在指定文件名的文件中"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "method_cooperation": "and/or",
+                        "method_works":[
+                            {
+                                "method_name": "获取文本2",
+                                "items_path": "a > b > c",
+                                "method_result": "item"
+                            },
+                            {
+                                "method_name": "获取文本2",
+                                "items_path": "a",
+                                "method_result": "url",
+                                "result_deal": {
+                                    "deal_name":"loadin",
+                                    "item_name":"获取百科信息"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                
+            }
+        ]
+    },
+    {
+        "item_name": "获取百科信息",
+        "item_url": "",
+        "workspace": [
+            {
+                "work_class": "第一部分",
+                "work_cooperation": "and/or",
+                "work_items": [
+                    {
+                        "method_cooperation": "and/or",
+                        "method_works":[
+                            {
+                                "method_name": "获取文本1保存名字",
+                                "items_path": "a > b > c",
+                                "method_result": "text",
+                                "result_deal": {
+                                    "deal_name":"save_variables //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
+                                    "variables_name":"abc //这里定义一个变量名字"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "method_cooperation": "and/or",
+                        "method_works":[
+                            {
+                                "method_name": "获取文本1",
+                                "items_path": "a > b > c",
+                                "method_result": "item"
+                            },
+                            {
+                                "method_name": "获取文本1",
+                                "items_path": "d",
+                                "method_result": "text",
+                                "result_deal": {
+                                    "deal_name":"save_text //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
+                                    "deal_path":"./${abc}.txt //如果这里是一个目录或者一个类型就保存为不同的txt, 否则只保存在指定文件名的文件中"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "method_cooperation": "and/or",
+                        "method_works":[
+                            {
+                                "method_name": "获取文本2",
+                                "items_path": "a > b > c",
+                                "method_result": "item"
+                            },
+                            {
+                                "method_name": "获取文本2",
+                                "items_path": "a",
+                                "method_result": "url",
+                                "result_deal": {
+                                    "deal_name":"loadin",
+                                    "item_name":"获取百科信息"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+
+            }
+        ]
+    }
+]
