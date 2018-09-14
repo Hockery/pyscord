@@ -2,7 +2,13 @@
     {
         "item_name": "百度网站",
         "item_url": "www.baidu.com",
-        "workspace": [
+        "get_method":"normal",
+        "method_describe":[
+            {"item_name":"获取的第一步"},
+            {"item_name":"获取的第二步"},
+            {"item_name":"获取的第三步"}
+        ],
+        "page_analyze": [
             {
                 "work_class": "第一部分",
                 "work_cooperation": "and/or",
@@ -27,16 +33,27 @@
                             {
                                 "method_name": "获取文本1",
                                 "items_path": "a > b > c",
-                                "method_result": "item"
-                            },
-                            {
-                                "method_name": "获取文本1",
-                                "items_path": "d",
-                                "method_result": "text",
-                                "result_deal": {
-                                    "deal_name":"save_text //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
-                                    "deal_path":"./${abc}.txt //如果这里是一个目录或者一个类型就保存为不同的txt, 否则只保存在指定文件名的文件中"
-                                }
+                                "method_result": "item",
+                                "reult_deal":[
+                                    {
+                                        "method_name": "获取文本1.1",
+                                        "items_path": "d1",
+                                        "method_result": "text",
+                                        "result_deal": {
+                                            "deal_name":"save_text //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
+                                            "deal_path":"./${abc}.txt //如果这里是一个目录或者一个类型就保存为不同的txt, 否则只保存在指定文件名的文件中"
+                                        }
+                                    },
+                                    {
+                                        "method_name": "获取文本1.2",
+                                        "items_path": "d2",
+                                        "method_result": "text",
+                                        "result_deal": {
+                                            "deal_name":"save_text",
+                                            "deal_path":"./${abc}.txt"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -46,16 +63,18 @@
                             {
                                 "method_name": "获取文本2",
                                 "items_path": "a > b > c",
-                                "method_result": "item"
-                            },
-                            {
-                                "method_name": "获取文本2",
-                                "items_path": "a",
-                                "method_result": "url",
-                                "result_deal": {
-                                    "deal_name":"loadin",
-                                    "item_name":"获取百科信息"
-                                }
+                                "method_result": "item",
+                                "result_deal":[
+                                    {
+                                        "method_name": "获取文本2",
+                                        "items_path": "a",
+                                        "method_result": "url",
+                                        "result_deal": {
+                                            "deal_name":"loadin",
+                                            "item_name":"获取百科信息"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -94,16 +113,18 @@
                             {
                                 "method_name": "获取文本1",
                                 "items_path": "a > b > c",
-                                "method_result": "item"
-                            },
-                            {
-                                "method_name": "获取文本1",
-                                "items_path": "d",
-                                "method_result": "text",
-                                "result_deal": {
-                                    "deal_name":"save_text //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
-                                    "deal_path":"./${abc}.txt //如果这里是一个目录或者一个类型就保存为不同的txt, 否则只保存在指定文件名的文件中"
-                                }
+                                "method_result": "item",
+                                "result_deal":[
+                                    {
+                                        "method_name": "获取文本1",
+                                        "items_path": "d",
+                                        "method_result": "text",
+                                        "result_deal": {
+                                            "deal_name":"save_text //save_database(保存在数据库中, 需要定义数据库的地址, 和保存方法), loadin(进入下一个网页处理)",
+                                            "deal_path":"./${abc}.txt //如果这里是一个目录或者一个类型就保存为不同的txt, 否则只保存在指定文件名的文件中"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -113,16 +134,18 @@
                             {
                                 "method_name": "获取文本2",
                                 "items_path": "a > b > c",
-                                "method_result": "item"
-                            },
-                            {
-                                "method_name": "获取文本2",
-                                "items_path": "a",
-                                "method_result": "url",
-                                "result_deal": {
-                                    "deal_name":"loadin",
-                                    "item_name":"获取百科信息"
-                                }
+                                "method_result": "item",
+                                "result_deal":[
+                                    {
+                                        "method_name": "获取文本2",
+                                        "items_path": "a",
+                                        "method_result": "url",
+                                        "result_deal": {
+                                            "deal_name":"loadin",
+                                            "item_name":"获取百科信息"
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     }
