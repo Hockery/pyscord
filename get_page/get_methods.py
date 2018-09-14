@@ -8,7 +8,7 @@ def get_html_normal(url, random_time):
     i = 2
     while(i):
         try:
-            sleep_random = random.randint(random_time[0],random_time[2])/1000
+            sleep_random = random.randint(random_time[0],random_time[1])/1000
             # print("sleep "+str(sleep_random)+" s")
             time.sleep(sleep_random)
             response = urllib.request.urlopen(url,timeout=3) 

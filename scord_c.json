@@ -1,8 +1,9 @@
 [
     {
         "item_name": "百度网站",
-        "item_url": "www.baidu.com",
+        "item_url": "https://www.taobao.com/",
         "get_method":"normal",
+        "get_time":[200,2000],
         "method_describe":[
             {"item_name":"获取的第一步"},
             {"item_name":"获取的第二步"},
