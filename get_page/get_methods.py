@@ -4,9 +4,10 @@ from log_init import logger
 
 def get_methods(method, url=''):
     if url == '' and "item_url" in method.keys():
-        method = method['item_url']
+        url = method['item_url']
     else:
         return
+        
     if method["get_method"] == "normal":
         if "get_time" in method.keys():
             get_time = method["get_time"]

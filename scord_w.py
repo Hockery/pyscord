@@ -5,6 +5,7 @@ import time, random, urllib
 from log_init import logger
 from get_page.get_methods import get_methods 
 from save_result import save_local
+from page_analyze import analyze_methods
 
 main_config = './scord_c.json'
 indent = '  '
@@ -23,9 +24,15 @@ def scord_main():
         for method in main_item["method_describe"]:
             data = get_methods(method)
             if data == '':
-                print("get %s failed!"%(main_item['item_url']))
+                print("get %s failed!"%(main_item['item_name']))
                 continue
-            print(data)
+            analyze_methods
+            # print("data", data)
+        for analyze_method in main_item["page_analyze"]:
+            for get_item in analyze_method:
+                print("get_item",get_item)
+                # print(get_item["work_items"])
+        break
 
 
 if __name__ == "__main__":

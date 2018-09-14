@@ -1,5 +1,8 @@
 import bs4 
 
+def analyze_methods(page, works_items):
+    pass
+
 def get_items(src_items, method, paths):
     if method == 'grad':
         tmps = src_items
