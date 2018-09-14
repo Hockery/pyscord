@@ -2,6 +2,16 @@ import urllib,bs4
 import random, time
 from log_init import logger
 
+def get_methods(method, url=''):
+    if url == '' and "item_url" in method.keys():
+        method = method['item_url']
+    else:
+        return
+    if method["get_method"] == "normal":
+        if "get_time" in method.keys():
+            get_time = method["get_time"]
+            if isinstance(get_time[0], int) and isinstance(get_time[1], int):
+                return get_html_normal(url, get_time)
 
 def get_html_normal(url, random_time):
     html = ''

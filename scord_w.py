@@ -3,7 +3,7 @@ import json
 import bs4 
 import time, random, urllib
 from log_init import logger
-from get_page import get_methods 
+from get_page.get_methods import get_methods 
 from save_result import save_local
 
 main_config = './scord_c.json'
@@ -20,15 +20,12 @@ def scord_main():
         main_json = json.loads(config_fb.read())
     # print(main_json)
     for main_item in main_json:
-        if "get_time" in main_item.keys():
-            get_time = main_item["get_time"]
-            if isinstance(get_time[0], int) and isinstance(get_time[1], int):
-                data = get_methods.get_html_normal(main_item['item_url'], get_time)
-                if data == '':
-                    print("get %s failed!"%(main_item['item_url']))
-                    continue
-                print(data)
-        # get_methods.get_html_normal(main_item['item_url'],)
+        for method in main_item["method_describe"]:
+            data = get_methods(method)
+            if data == '':
+                print("get %s failed!"%(main_item['item_url']))
+                continue
+            print(data)
 
 
 if __name__ == "__main__":

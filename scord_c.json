@@ -1,13 +1,23 @@
 [
     {
         "item_name": "百度网站",
-        "item_url": "https://www.taobao.com/",
-        "get_method":"normal",
-        "get_time":[200,2000],
         "method_describe":[
-            {"item_name":"获取的第一步"},
-            {"item_name":"获取的第二步"},
-            {"item_name":"获取的第三步"}
+            {
+                "item_url": "https://www.taobao.com/",
+                "item_name":"获取的第一步",
+                "get_method":"normal",
+                "get_time":[200,2000]
+            },
+            {
+                "item_name":"获取的第二步",
+                "get_method":"normal",
+                "get_time":[200,2000]
+            },
+            {
+                "item_name":"获取的第三步",
+                "get_method":"normal",
+                "get_time":[200,2000]
+            }
         ],
         "page_analyze": [
             {
